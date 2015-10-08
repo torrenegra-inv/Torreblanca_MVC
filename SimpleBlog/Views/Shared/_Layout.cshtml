@@ -1,0 +1,19 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Simple Post - @ViewBag.Title</title>
+    </head>
+<body>
+        <header><h1>Simple Blog</h1></header>
+    <div>
+        <!--Isert View here-->
+        @RenderBody()
+    </div>
+    @RenderSection("Scripts",false)
+</body>
+</html>
