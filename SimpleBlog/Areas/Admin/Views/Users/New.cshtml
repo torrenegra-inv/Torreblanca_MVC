@@ -4,6 +4,8 @@
 
 @using (Html.BeginForm())
 {
+    
+    @Html.AntiForgeryToken()
     @Html.ValidationSummary()
 
     <div class="form-group">

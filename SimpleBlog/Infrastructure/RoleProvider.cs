@@ -4,7 +4,7 @@
     {
         public override string[] GetRolesForUser(string username)
         {
-            if (username == "Torreblanca")
+            if (username == "Jorge")
             {
                 return new[] {"admin"};
             }
