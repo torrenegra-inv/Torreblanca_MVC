@@ -13,10 +13,16 @@ namespace SimpleBlog.Models
 
         public virtual void SetPassword(string password)
         {
-            PasswordHash = "TODO";
+            PasswordHash = BCrypt.Net.BCrypt.HashPassword(password, 13);
         }
 
+        public virtual bool CheckPassword(string password)
+        {
+            return BCrypt.Net.BCrypt.Verify(password, PasswordHash);
+        }
     }
+
+    
 
     public class UserMap : ClassMapping<User>
     {
