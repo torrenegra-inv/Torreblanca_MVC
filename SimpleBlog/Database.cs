@@ -14,7 +14,7 @@ namespace SimpleBlog
 
         private const string SessionKey = "Simpleblog.Database.SessionKey";
 
-        public static ISession Session
+        public static ISession Session 
         {
             get { return (ISession) HttpContext.Current.Items[SessionKey]; }
         }
@@ -29,6 +29,7 @@ namespace SimpleBlog
             //add mappings
             var mapper = new ModelMapper();
             mapper.AddMapping<UserMap>();
+            mapper.AddMapping<RoleMap>();
 
             config.AddMapping(mapper.CompileMappingForAllExplicitlyAddedEntities());
 
