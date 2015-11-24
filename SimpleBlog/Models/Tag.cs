@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using NHibernate.Mapping.ByCode;
 using NHibernate.Mapping.ByCode.Conformist;
+using SimpleBlog.Areas.Admin.Controllers;
 
 namespace SimpleBlog.Models
 {
@@ -11,6 +12,11 @@ namespace SimpleBlog.Models
         public virtual string Name { get; set; }
 
         public virtual IList<Post> Post { get; set; }
+
+        public Tag()
+        {
+            Post = new List<Post>();
+        }
     }
 
     public class TagMap : ClassMapping<Tag>

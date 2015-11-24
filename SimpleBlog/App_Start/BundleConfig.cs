@@ -21,6 +21,9 @@ namespace SimpleBlog
                 .Include("~/Scripts/bootstrap.js")
                 .Include("~/areas/Admin/Scripts/Forms.js"));
 
+            bundles.Add(new StyleBundle("~/admin/post/scripts")
+                .Include("~/areas/Admin/Scripts/PostEditor.js"));
+
             bundles.Add(new StyleBundle("~/scripts")
                .Include("~/Scripts/jquery-2.1.4.js")
                .Include("~/Scripts/jquery.validate.js")
